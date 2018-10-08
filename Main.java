@@ -30,6 +30,7 @@ class Main
          *          call this array ar1.  Print it out below.
          */
         System.out.println("*** PRINTING ar1 *");
+        int[] ar1 = new int[n];
         
                 
         /*
