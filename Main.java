@@ -29,7 +29,7 @@ class Main
          * Task 1.  Create an array of integers from 0 to n-1
          *          call this array ar1.  Print it out below.
          */
-        System.out.println("*** PRINTING ar1 *");
+        System.out.println("*** TASK 1 *");
         int[] ar1 = new int[n];
         for (int i=0; i<=n-1; i++)
             ar1[i] = i;
@@ -42,14 +42,23 @@ class Main
          *          Copy the elements of ar1 into ar2.
          */
         // int[] ar2 = ar1.clone();
+        System.out.println("*** TASK 2 *");
         int[] ar2 = new int[ar1.length];
-        for (int x=0; x<=ar2.length; x++)
-            ar2[x]=ar1[x];
-            System.out.println(ar2[x]);
+        for (int x=0; x<ar2.length; x++)
+         {
+             ar2[x]=ar1[x];
+             System.out.println(ar2[x]);
+         }
         
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
+        System.out.println("*** TASK 3*");
+        for (int x = 0; x<ar1.length; x++)
+        {
+            ar1[x] = ar1[x]+1;
+            System.out.println(ar1[x]);
+        }
         
 
         
@@ -61,13 +70,32 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
+        System.out.println("*** TASK 4 *");
+        int [] ar3 = new int[2*n];
+        for (int x =0; x<n; x++)
+        {
+            ar3 [x] = ar1[x];
+            System.out.println(ar3[x]);
+        }    
+        for (int x=0; x<n; x++)
+        {
+            ar3[x+n] = ar1[x];
+            System.out.println(ar3[x]);
+        }
+        
         
         
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
-        
+        System.out.println("*** TASK 5 *");
+        int a = ar1[0];
+        ar1 [0] = ar1 [ar1.length-1];
+        ar1 [n-1] = a;
+        for (int x = 0; x<n; x++)
+            System.out.println(ar1[x]);
+
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          * Task 6B: Print out just the odd numbers in ar1
