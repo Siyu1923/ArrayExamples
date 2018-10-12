@@ -95,15 +95,39 @@ class Main
         ar1 [n-1] = a;
         for (int x = 0; x<n; x++)
             System.out.println(ar1[x]);
+        ar1 [n-1] = ar1 [0];
+        ar1 [0] = a;
 
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          * Task 6B: Print out just the odd numbers in ar1
          * Task 6C: Print out the elements of ar1 when
          *          the indices are multiples of 3
-         *         
          */
-        
+        System.out.println("*** TASK 6A *");
+        for (int x=1; x<n-1; x++)
+        {
+            System.out.println(ar1[x]);
+        }
+        System.out.println("*** TASK 6B *");
+        for (int x=0; x<n; x++)
+        {
+            if (ar1[x]%2!=0)
+            System.out.println(ar1[x]);
+        }
+        System.out.println("*** TASK 6C *");
+        //indices are multiples of 3
+        for (int x=0; x<n; x++)
+        {
+            if (x%3==0)
+            System.out.println(ar1[x]);
+        }
+        // values are multiples of 3
+        for (int x=0; x<n; x++)
+        {
+            if (ar1[x]%3==0)
+            System.out.println(ar1[x]);
+        }
         /*
          * Task 7.  For each element in ar1, 
          *          If the element is even: leave alone
@@ -115,6 +139,13 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
+        System.out.println("*** TASK 7 *");
+        for (int x=0; x<n; x++)
+        {
+            if (ar1[x]%2!=0)
+            ar1[x] = ar1[x]*10;
+            System.out.println(ar1[x]);
+        }
         
          /*
           * Task 8
