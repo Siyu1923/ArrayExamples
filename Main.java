@@ -158,15 +158,20 @@ class Main
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
         System.out.println("*** TASK 8 *");
-        int[] ar2odds = new int[ar2.length/2+1];
+        int len;
+        if (ar2.length%2==0)
+        len = ar2.length/2;
+        else
+        len = ar2.length/2+1;
+        int[] ar2odds = new int[len];
         int x =0;
-        for (int y=0; x<ar2.length/2; y++)
+        for (int y=0; x<len; y++)
             {
                 if (y%2!=0)
                 {ar2odds [x] = ar2 [y];
                 x++;}
             }
-        for (int i=0; i<ar2odds.length/2; i++)
+        for (int i=0; i<len; i++)
         System.out.println(ar2odds[i]);
         
         /*
@@ -174,6 +179,22 @@ class Main
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
+        int y=0;
+        System.out.println("*** TASK 9 *");
+        for (int i=0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2!=0)
+            y++;
+            else
+            y =y;
+        }
+        for (int i=0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2!=0)
+            y++;
+            else
+            y =y;
+        }
         
         /*
          * Task 10.  Shift the elements of ar4 right by 1
