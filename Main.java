@@ -158,18 +158,16 @@ class Main
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
         System.out.println("*** TASK 8 *");
-        int len;
-        if (ar2.length%2==0)
-        len = ar2.length/2;
-        else
-        len = ar2.length/2+1;
+        int len = ar2.length/2;
         int[] ar2odds = new int[len];
         int x =0;
-        for (int y=0; x<len; y++)
+        for (int y=0; y<ar2.length; y++)
             {
                 if (y%2!=0)
                 {ar2odds [x] = ar2 [y];
                 x++;}
+                else
+                x=x;
             }
         for (int i=0; i<len; i++)
         System.out.println(ar2odds[i]);
@@ -186,15 +184,22 @@ class Main
             if (ar2[i]%2!=0)
             y++;
             else
-            y =y;
+            y=y;
         }
-        for (int i=0; i<ar2.length; i++)
+        int [] ar4 = new int[y];
+        int ii =0;
+        for (int i=0; ii<y; i++)
         {
             if (ar2[i]%2!=0)
-            y++;
+            {
+                ar4[ii] = ar2[i];
+                ii++;
+            }
             else
-            y =y;
+            i=i;
         }
+        for (int i=0; i<y; i++)
+        System.out.println(ar4[i]);
         
         /*
          * Task 10.  Shift the elements of ar4 right by 1
@@ -203,6 +208,15 @@ class Main
          * new   ar4  9 1 3 5 7
          */
         
+        System.out.println("*** TASK 10 *");
+        int temp = ar4 [y-1];
+        for (int i=y-1; i>0; i--)
+        {
+            ar4 [i] = ar4[i-1];
+        }
+        ar4 [0] = temp;
+        for (int i=0; i<y; i++)
+        System.out.println(ar4[i]);
         
         /*
          * Task 11.  Reverse the order of elements in ar2
