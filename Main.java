@@ -276,8 +276,17 @@ class Main
         int [] ar6 = new int [16];
         for (int i = 0; i<16; i++)
         {
-            ar6[i] = ar5[i].length();
+            ar6[i] = (ar5[i]).length();
         }
+        int five = 0;
+        for (int i = 0; i<16; i++)
+        {
+            if (ar6[i]>5)
+            five++;
+            else
+            five = five;
+        }
+        System.out.println(five);
         
         /*
          * Task 13
@@ -293,6 +302,28 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
+        
+        System.out.println("*** TASK 13 *");
+        String [] monsterArray = new String [5];
+        monsterArray [0] = "Cookie";
+        monsterArray [1] = "Grover";
+        monsterArray [2] = "Oscar the Grouch";
+        monsterArray [3] = "Elmo";
+        monsterArray [4] = "Rosita";
+        
+        int num = 0;
+        for (int i=0 ; i<5; i++)
+        {
+            if ((monsterArray[i]).charAt(0)=='A' || (monsterArray[i]).charAt(0)=='E')
+            num ++;
+            else if ((monsterArray[i]).charAt(0)=='I' || (monsterArray[i]).charAt(0)=='O')
+            num ++;
+            else if ((monsterArray[i]).charAt(0)=='E')
+            num++;
+            else
+            num = num;   
+        }
+        System.out.println(num);
         
          /*
           * Task 14
@@ -310,6 +341,24 @@ class Main
           *         arindex[1]=5
           */
          
+         System.out.println("*** TASK 14 *");
+         int [] arx = new int [92];
+         for (int i=0; i<92; i++)
+            arx [i] = 3+i;
+         int [] arindex = new int [92/3+1];
+         int yl = 0;
+         for (int i=0; i<92; i++)
+         {
+            if (arx[i]%3==0)
+            {
+                arindex[yl] = i;
+                yl++;
+            }
+            else
+            yl =yl;
+        }
+        for (int i=0; i<arindex.length; i++)
+            System.out.println(arindex[i]);
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
