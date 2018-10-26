@@ -369,5 +369,15 @@ class Main
           * fb[4]=fb[2]+fb[3]
           */
         
-    }
+         System.out.println("*** TASK 15 *");
+         int [] fb = new int [10];
+         fb [0] = 1;
+         fb [1] = 1;
+         for (int i = 2; i<10; i++)
+         {
+            fb [i] = fb [i-2] + fb [i-1];
+         }
+         for (int i=0; i<fb.length; i++)
+            System.out.println(fb[i]);
+}
 }
